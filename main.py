@@ -17,8 +17,6 @@ lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 tcp = df['tcp'].drop_duplicates()
 tcp_choice = st.selectbox('TCP:', tcp)
 
-df.set_index('id', inplace=True)
-
 def pretty_print(df):
     return display(HTML(df.to_html().replace("\\n","<br>")))
 
