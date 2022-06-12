@@ -13,11 +13,9 @@ lot_area_sqm = df['lot_area_sqm'].drop_duplicates()
 lot_area_sqm = pd.concat([pd.Series(['Filter by lot area']), lot_area_sqm])
 lot_area_sqm_choice = st.sidebar.selectbox('', lot_area_sqm)
 
-st.sidebar.markdown('**Reservation Fee**: Php 30,000.00\n**Computation**: 70% Loan, 30% DP\n**Inclusions**: 1 BR Nipa Hut,\n5 Goats,\n10 Native Chickens,\n1 Pair Turkey,\n2 Buddah Bamboo Poles')
+st.sidebar.markdown('**Reservation Fee**: Php 30,000.00<br/>**Computation**: 70% Loan, 30% DP<br/>**Inclusions**: 1 BR Nipa Hut,<br/>5 Goats,<br/>10 Native Chickens,<br/>1 Pair Turkey,<br/>2 Buddah Bamboo Poles')
 
-st.sidebar.markdown('**Contact Info**: +639560861684\n+639917285314\n+639760445567')
-
-st.markdown('Streamlit is **_really_ cool**.')
+st.sidebar.markdown('**Contact Info**: +639560861684<br/>+639917285314<br/>+639760445567')
 
 if lot_area_sqm_choice != 'Filter by lot area':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
