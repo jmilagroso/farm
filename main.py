@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+from IPython.display import display, HTML
 
 st.set_page_config(layout="wide")
 
@@ -16,4 +17,13 @@ lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 tcp = df['tcp'].drop_duplicates()
 tcp_choice = st.selectbox('TCP:', tcp)
 
-st.dataframe(df)
+df.set_index('id', inplace=True)
+
+def pretty_print(df):
+    return display(HTML(df.to_html().replace("\\n","<br>")))
+
+  
+st.dataframe(pretty_print(df))
+
+
+
