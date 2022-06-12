@@ -14,12 +14,6 @@ df = pd.read_csv(url)
 lot_area_sqm = df['lot_area_sqm'].drop_duplicates()
 lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 
-tcp = df['tcp'].drop_duplicates()
-tcp_choice = st.selectbox('TCP:', tcp)
-
-df.description.str.split("\n", expand=True).stack()
+df.query(f'lot_area_sqm == {lot_area_sqm}')
 
 st.dataframe(df)
-
-
-
