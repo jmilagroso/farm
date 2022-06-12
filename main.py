@@ -9,9 +9,9 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sh
 df = pd.read_csv(url)
 
 lot_area_sqm = df['lot_area_sqm'].drop_duplicates()
-lot_area_sqm_choice = st.sidebar.selectbox('Lot Area (sqm):', lot_area_sqm)
+lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 
 tcp = df['tcp'].drop_duplicates()
-tcp_choice = st.sidebar.selectbox('TCP:', tcp)
+tcp_choice = st.selectbox('TCP:', tcp)
 
 st.dataframe(df)
