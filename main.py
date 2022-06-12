@@ -22,4 +22,4 @@ st.sidebar.text('Contact Info: +639560861684\n+639917285314\n+639760445567')
 if lot_area_sqm_choice != 'Filter by lot area':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
 
-st.write(df, 600, 300)
+st.dataframe(df, 600, 300)
