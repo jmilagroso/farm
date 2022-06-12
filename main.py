@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from IPython.display import display, HTML
+from st_aggrid import AgGrid
 
 sheet_id   = st.secrets["google-spreadsheet"]["sheet_id"]
 sheet_name = st.secrets["google-spreadsheet"]["sheet_name"]
@@ -21,4 +21,4 @@ lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 if lot_area_sqm_choice != 'All':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
 
-st.dataframe(df)
+AgGrid(df)
