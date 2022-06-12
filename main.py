@@ -9,9 +9,7 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sh
 
 df = pd.read_csv(url)
 
-st.sidebar.text('Reservation Fee : Php 30,000.00\nComputation: 70% Loan, 30% DP\nInclusions: 1 BR Nipa Hut, 5 Goats, 10 Native Chickens, 1 Pair Turkey, 2 Buddah Bamboo Poles')
-st.sidebar.text('Computation: 70% Loan, 30% DP')
-st.sidebar.text('Inclusions: 1 BR Nipa Hut, 5 Goats, 10 Native Chickens, 1 Pair Turkey, 2 Buddah Bamboo Poles')
+st.sidebar.text('Reservation Fee : Php 30,000.00\nComputation: 70% Loan, 30% DP\nInclusions: 1 BR Nipa Hut,\n5 Goats,\n10 Native Chickens,\n1 Pair Turkey,\n2 Buddah Bamboo Poles')
 st.sidebar.text('Contact: +639560861684\n+639917285314\n+639760445567')
 
 lot_area_sqm = df['lot_area_sqm'].drop_duplicates()
