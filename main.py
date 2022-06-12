@@ -1,6 +1,8 @@
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 sheet_id   = st.secrets["google-spreadsheet"]["sheet_id"]
 sheet_name = st.secrets["google-spreadsheet"]["sheet_name"]
 
