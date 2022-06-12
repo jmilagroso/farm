@@ -18,4 +18,6 @@ lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 if lot_area_sqm_choice != 'All':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
 
+df['description'] = df['description'].map(lambda x: display(HTML(x.to_html().replace("\\n","<br>")))  
+ 
 st.dataframe(df)
