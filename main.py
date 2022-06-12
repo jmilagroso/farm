@@ -8,4 +8,7 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sh
 
 df = pd.read_csv(url)
 
+tcp = df['tcp'].drop_duplicates()
+tcp_choice = st.sidebar.selectbox('TCP:', tcp)
+
 st.dataframe(df)
