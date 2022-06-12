@@ -20,5 +20,13 @@ if lot_area_sqm_choice != 'All':
 
 st.dataframe(df)
 
+st.text('''
+Inclusions:
+1BR Nipa Hut
+5 goats
+10 native chickens
+1pair Turkey
+2 Buddah Bamboo Poles
+'''
 st.text('Computation: 70% Loan, 30% DP')
 st.text('Contact: +63 956 086 1684\n+63991 728 5314\n+63976 044 5567')
