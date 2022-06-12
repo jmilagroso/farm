@@ -12,10 +12,10 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sh
 df = pd.read_csv(url)
 
 lot_area_sqm = df['lot_area_sqm'].drop_duplicates()
-st.write(type(lot_area_sqm))
+lot_area_sqm = pd.concat([pd.Series([0]), lot_area_sqm])
 lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 
-if lot_area_sqm_choice:
+if lot_area_sqm_choice != 0:
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
 
 st.dataframe(df)
