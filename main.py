@@ -12,7 +12,7 @@ df = pd.read_csv(url)
 st.text('Reservation Fee : Php 30,000.00')
 st.text('Inclusions: 1BR Nipa Hut, 5 goats, 10 native chickens, 1 pair Turkey, 2 Buddah Bamboo Poles')
 st.text('Computation: 70% Loan, 30% DP')
-st.text('Contact: +639560861684, +639917285314, +63976 044 5567')
+st.text('Contact: +639560861684, +639917285314, +639760445567')
 
 lot_area_sqm = df['lot_area_sqm'].drop_duplicates()
 lot_area_sqm = pd.concat([pd.Series(['All']), lot_area_sqm])
