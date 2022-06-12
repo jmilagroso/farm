@@ -19,3 +19,6 @@ if lot_area_sqm_choice != 'All':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
 
 st.dataframe(df)
+
+st.text('Computation: 70% Loan, 30% DP')
+st.text('Contact: '+63 956 086 1684\n+63991 728 5314\n+63976 044 5567')
