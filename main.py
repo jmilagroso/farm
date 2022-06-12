@@ -4,12 +4,6 @@ from IPython.display import display, HTML
 
 st.set_page_config(layout="wide")
 
-# Assuming the variable df contains the relevant DataFrame
-display(df.style.set_properties(**{
-    'white-space': 'pre-wrap',
-})
-
-
 sheet_id   = st.secrets["google-spreadsheet"]["sheet_id"]
 sheet_name = st.secrets["google-spreadsheet"]["sheet_name"]
 
@@ -23,5 +17,10 @@ lot_area_sqm_choice = st.selectbox('Lot Area (sqm):', lot_area_sqm)
 
 if lot_area_sqm_choice != 'All':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
- 
+
+# Assuming the variable df contains the relevant DataFrame
+display(df.style.set_properties(**{
+    'white-space': 'pre-wrap',
+})
+
 st.dataframe(df)
