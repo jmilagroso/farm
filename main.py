@@ -25,4 +25,4 @@ if lot_area_sqm_choice != 'All':
 def pretty_print(df):
     return display( HTML( df.to_html().replace("\\n","<br>") ) )
   
-st.dataframe(pretty_print(df))
+pretty_print(df)
