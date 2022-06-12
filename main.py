@@ -19,10 +19,9 @@ if lot_area_sqm_choice != 'All':
   df = df.query(f'lot_area_sqm == {lot_area_sqm_choice}')
 
 # Assuming the variable df contains the relevant DataFrame
-# display(df.style.set_properties(**{
-#     'white-space': 'pre-wrap',
-# })
-def pretty_print(df):
-    return display( HTML( df.to_html().replace("\\n","<br>") ) )
-  
-pretty_print(df)
+display(df.style.set_properties(**{
+    'white-space': 'pre-wrap'
+})
+
+
+st.write(df)
